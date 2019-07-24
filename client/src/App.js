@@ -3,6 +3,9 @@ import styled from 'styled-components';
 import './App.css';
 import orange from './orange.jpg';
 import imageone from './imageone.jpg';
+import busone from './busone.jpg';
+import bustwo from './bustwo.png';
+import busthree from './busthree.jpg';
 
 function App() {
   return (
@@ -23,7 +26,19 @@ function App() {
         <div className="imgone">
           <img src={imageone} alt=""/>
         </div>
+        <div className="imgtwo">
+          <img src={busone} alt=""/>
+        </div>
+        <div className="imgthree">
+          <img src={bustwo} alt=""/>
+        </div>
+        <div className="imgfour">
+          <img src={busthree} alt=""/>
+        </div>
       </ContentOne>
+      <Parallax image={orange}>
+        Passio GO! Bus Shelter Poster Ad
+      </Parallax>
     </div>
   );
 }
@@ -99,6 +114,19 @@ const Parallax = styled.div`
   align-items: center;
   font-size: 4rem;
   color: rgb(51, 51, 51);
+  font-family: 'Arimo', sans-serif;
+  text-shadow: 0 1px 0 rgb(89, 89, 89),
+               0 2px 0 rgb(77, 77, 77),
+               0 3px 0 rgb(64, 64, 64),
+               0 4px 0 rgb(51, 51, 51),
+               0 5px 0 #262626,
+               0 6px 1px rgba(0,0,0,.1),
+               0 0 5px rgba(0,0,0,.1),
+               0 1px 3px rgba(0,0,0,.3),
+               0 3px 5px rgba(0,0,0,.2),
+               0 5px 10px rgba(0,0,0,.25),
+               0 10px 10px rgba(0,0,0,.2),
+               0 20px 20px rgba(0,0,0,.15);
 `;
 
 const ContentOne = styled.div`
@@ -106,6 +134,7 @@ const ContentOne = styled.div`
   .imgone{
     padding: 50px 0;
   }
+  padding-bottom: 50px;
 `;
 
 export default App;
