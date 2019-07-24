@@ -1,26 +1,100 @@
 import React from 'react';
-import logo from './logo.svg';
+import styled from 'styled-components';
 import './App.css';
+import fay from './fay.jpg';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Home>
+        <Header>
+          <div>
+          <span>P</span>
+          <span>R</span>
+          </div>
+          <h4>Phillip Rhoades</h4>
+        </Header>
+      </Home>
+      <Parallax image={fay}></Parallax>
+      <ContentOne>
+
+      </ContentOne>
     </div>
   );
 }
+
+const Home = styled.div`
+  height: 100vh;
+  width: 100vw;
+  background: rgb(51, 51, 51);
+  span:nth-child(1){
+    font-family: 'Arimo', sans-serif;
+    color: black;
+    font-size: 10rem;
+    font-weight: bold;
+    text-shadow: 0 1px 0 rgb(89, 89, 89),
+               0 2px 0 rgb(77, 77, 77),
+               0 3px 0 rgb(64, 64, 64),
+               0 4px 0 rgb(51, 51, 51),
+               0 5px 0 #262626,
+               0 6px 1px rgba(0,0,0,.1),
+               0 0 5px rgba(0,0,0,.1),
+               0 1px 3px rgba(0,0,0,.3),
+               0 3px 5px rgba(0,0,0,.2),
+               0 5px 10px rgba(0,0,0,.25),
+               0 10px 10px rgba(0,0,0,.2),
+               0 20px 20px rgba(0,0,0,.15);
+  }
+  span:nth-child(2) {
+    font-family: 'Arimo', sans-serif;
+    color: orange;
+    font-size: 10rem;
+    font-weight: bold;
+    transform: rotateY(180deg);
+    display: inline-block;
+    text-shadow: 0 1px 0 rgb(255, 204, 153),
+               0 2px 0 rgb(255, 204, 102),
+               0 3px 0 rgb(255, 204, 0),
+               0 4px 0 rgb(255, 153, 0),
+               0 5px 0 rgb(255, 128, 0),
+               0 6px 1px rgba(0,0,0,.1),
+               0 0 5px rgba(0,0,0,.1),
+               0 1px 3px rgba(0,0,0,.3),
+               0 3px 5px rgba(0,0,0,.2),
+               0 5px 10px rgba(0,0,0,.25),
+               0 10px 10px rgba(0,0,0,.2),
+               0 20px 20px rgba(0,0,0,.15);
+  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+const Header = styled.div`
+  padding-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  h4{
+    color: white;
+    margin: 0;
+    font-weight: 100;
+    letter-spacing: 10px;
+    font-size: 1.5rem;
+  }
+`;
+
+const Parallax = styled.div`
+  background-image: url(${props => props.image});
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 350px;
+`;
+
+const ContentOne = styled.div`
+  height: 500px;
+  background: rgb(51, 51, 51); 
+`;
 
 export default App;
