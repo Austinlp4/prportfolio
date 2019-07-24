@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import './App.css';
-import fay from './fay.jpg';
+import orange from './orange.jpg';
+import imageone from './imageone.jpg';
 
 function App() {
   return (
@@ -15,9 +16,13 @@ function App() {
           <h4>Phillip Rhoades</h4>
         </Header>
       </Home>
-      <Parallax image={fay}></Parallax>
+      <Parallax image={orange}>
+        Hiring Campaigns, Van Mocks, Marketing Spread
+      </Parallax>
       <ContentOne>
-
+        <div className="imgone">
+          <img src={imageone} alt=""/>
+        </div>
       </ContentOne>
     </div>
   );
@@ -25,7 +30,6 @@ function App() {
 
 const Home = styled.div`
   height: 100vh;
-  width: 100vw;
   background: rgb(51, 51, 51);
   span:nth-child(1){
     font-family: 'Arimo', sans-serif;
@@ -90,11 +94,18 @@ const Parallax = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4rem;
+  color: rgb(51, 51, 51);
 `;
 
 const ContentOne = styled.div`
-  height: 500px;
   background: rgb(51, 51, 51); 
+  .imgone{
+    padding: 50px 0;
+  }
 `;
 
 export default App;
