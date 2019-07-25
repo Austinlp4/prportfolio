@@ -28,12 +28,27 @@ function App() {
         </div>
         <div className="imgtwo">
           <img src={busone} alt=""/>
+          <p>While working with Razorback Transit, I has heavily involved with hiring 
+            campaigns on social media and printed media. One of the main goals of mine 
+            at Razorback Transit was to improve the hiring ads and materials. Most of my 
+            decisions in making these were based in simplifying the information; without 
+            mincing words and keeping the message clear, we wanted our draw to be clear 
+            and without confusion.</p>
         </div>
         <div className="imgthree">
           <img src={bustwo} alt=""/>
+          <p>I was also asked to create base van mock-up files for the new vans for the service SAFE-RIDE. 
+            Using the photographs given, I created vector mocks that could be edited and changed to whatever
+             design any of those in charge of the service would want.</p>
         </div>
         <div className="imgfour">
           <img src={busthree} alt=""/>
+          <p>
+          I also used similar assets that I had made from previous projects with other provided by PassioGO! 
+          to create a printed ad spread that would go on the back of parking maps that get handed out by the 
+          Parking Dept. during events. I was able to design this spread for hiring, bus schedules, and the app,
+           PassioGO!
+          </p>
         </div>
       </ContentOne>
       <Parallax image={orange}>
@@ -135,6 +150,21 @@ const ContentOne = styled.div`
     padding: 50px 0;
   }
   padding-bottom: 50px;
+  .imgtwo, .imgthree, .imgfour{
+    img{
+      margin-bottom: 50px;
+    }
+    p{
+      max-width: 1000px;
+      width: 100%;
+      color: white;
+      margin: 0 auto;
+      margin-bottom: 100px;
+      font-size: 1.5rem;
+      line-spacing: 2;
+      text-align: left;
+    }
+  }
 `;
 
 export default App;
