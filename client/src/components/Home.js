@@ -20,7 +20,7 @@ class Home extends React.Component{
         return(
             <div>
                 <Hero>
-                  {this.state.menu ?
+                  {/* {this.state.menu ?
                   <Menu onClick={this.close}>
                     <div className='links'>
                     <h2>Menu</h2>
@@ -37,7 +37,10 @@ class Home extends React.Component{
                         <div></div>
                         <div></div>
                     </Hamburger>
-                  }
+                  } */}
+                  <NavLink to="/about" id='about'>About</NavLink>
+                  <Middle>
+                    <NavLink to="/digitaldesign" id='digitaldesign'>Digital Design</NavLink>
                     <Header>
                         <div>
                             <span>P</span>
@@ -45,8 +48,11 @@ class Home extends React.Component{
                         </div>
                         <h4>Phillip Rhoades</h4>
                     </Header>
+                    <NavLink to="/photography" id='photography'>Photography</NavLink>
+                  </Middle>
+                  <NavLink to="/contact" id='contact'>Contact</NavLink>
                 </Hero>
-                <Parallax image={orange}>
+                {/* <Parallax image={orange}>
                     Hiring Campaigns, Van Mocks, Marketing Spread
                 </Parallax>
                 <ContentOne>
@@ -80,11 +86,36 @@ class Home extends React.Component{
                 </ContentOne>
                 <Parallax image={orange}>
                     Passio GO! Bus Shelter Poster Ad
-                </Parallax>
+                </Parallax> */}
             </div>
         )
     }
 }
+
+const Middle = styled.div`
+  display: flex;
+  justify-content: space-between;
+  a{
+    font-size: 1.3rem;
+    text-decoration: none;
+    color: white;
+    &:hover{
+      color: orange;
+      font-size: 1.5rem;
+    }
+  }
+  #digitaldesign{
+    transform: rotate(90deg);
+    height: 10px;
+  }
+  #photography{
+    transform: rotate(270deg);
+    height: 10px;
+  }
+  width: 100%;
+  align-items: center;
+  font-weight: 300;
+`;
 
 const Menu = styled.div`
   position: fixed;
@@ -191,8 +222,24 @@ const Hero = styled.div`
                0 20px 20px rgba(0,0,0,.15);
   }
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
+  #about{
+    margin-top:20px;
+  }
+  #contact{
+    margin-bottom: 20px;
+  }
+  a{
+    font-size: 1.3rem;
+    text-decoration: none;
+    color: white;
+    &:hover{
+      color: orange;
+      font-size: 1.5rem;
+    }
+  }
 `;
 
 const Header = styled.div`
